@@ -2,6 +2,10 @@ import './style.css'
 import './styles/hero.css'
 import './styles/table.css'
 import './styles/form.css'
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import '../node_modules/datatables.net-dt/css/jquery.dataTables.min.css';
+import '../node_modules/datatables.net-dt/js/dataTables.dataTables.min.js';
+import '../node_modules/datatables.net/js/jquery.dataTables.min.js';
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <div>
@@ -34,7 +38,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h1 class="modal-title fs-5 fw-semibold" id="staticBackdropLabel title-form">Student registration</h1>
+          <h1 class="modal-title fs-5 fw-semibold title-form" id="staticBackdropLabel">Add new student</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
@@ -43,9 +47,9 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
         <div class="mb-1">
         <label for="tipoIdentificacion" class="form-label fw-medium">Tipo de Identificación:</label>
         <select name="tipoIdentificacion" id="tipoIdentificacion" class="form-select" data-type="tipoIdentificacion" required>
-          <option value="1">Cedula</option>
-          <option value="2">Pasaporte</option>
-          <option value="3">Tarjeta de Identidad</option>
+          <option value="1">Cédula de ciudadanía</option>
+          <option value="2">Tarjeta de identidad</option>
+          <option value="3">Pasaporte</option>
         </select>
         <span class="input-message-error">Este campo no es valido</span>
       </div>
@@ -93,7 +97,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
       </div>
       <div class="modal-footer">
       <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
-      <button type="submit" class="btn btn-primary" id="btn-form">Save</button>
+      <button type="submit" class="btn btn-primary" id="btn-form">Sign In</button>
       </div>
       </div>
       </form>
@@ -101,6 +105,22 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
     </div>
   </div>
 
+  <div class="modal fade" id="staticBackdrop2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+      <div class="modal-header card-header"></div>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body card-body">
+
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Back to first</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 <div class="container py-5">
 

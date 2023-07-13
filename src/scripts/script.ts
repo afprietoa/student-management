@@ -12,6 +12,8 @@ let dataTable: any;
 let isInitialized = false;
 
 document.addEventListener('DOMContentLoaded', async() => {
+
+
     initDataTable(isInitialized, dataTable, columns, thead, tbody);
 })
 
@@ -19,7 +21,7 @@ const inputs:NodeList = document.querySelectorAll('input')
 
 
 inputs.forEach(input =>{
-    console.log(input)
+    //console.log(input)
     input.addEventListener('blur', (input)=>{
         console.log(input.target)
         validate(input.target)
@@ -69,14 +71,15 @@ document.addEventListener('click', async (event: MouseEvent) => {
     // functionality to update a student
     if(target.classList.contains('edit')){
 
+        sessionStorage.setItem('studentByUpdate', JSON.stringify(target.id));
     }
 
     // funcionality to go to student's detail
     if(target.classList.contains('visibility')){
-
+        sessionStorage.setItem('studentByShow', JSON.stringify(target.id));
     }
     // functionality to add a student
     if(target.classList.contains('person')){
-
+  
     }
   });

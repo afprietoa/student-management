@@ -30,4 +30,5 @@ export const initDataTable: (isInitialized:boolean, dataTable: any , columns:Arr
     dataTable = new DataTable( '#example', dataTableOptions );
     
     isInitialized = true;
+
 }

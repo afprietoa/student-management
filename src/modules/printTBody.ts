@@ -42,6 +42,8 @@ export const printBody: (tbody: HTMLElement|null, array: Array<Estudiante>) => v
         let spanVisibility= document.createElement('span') as HTMLElement;
         spanVisibility.setAttribute('class','material-symbols-outlined actions visibility')
         spanVisibility.setAttribute('id',item.estudiante_id.toString())
+        spanVisibility.setAttribute('data-bs-toggle','modal')
+        spanVisibility.setAttribute('data-bs-target','#staticBackdrop2')
         let txtVisibility= document.createTextNode('visibility') as Text;
         spanVisibility.appendChild(txtVisibility);
         tdActions?.appendChild(spanVisibility);
