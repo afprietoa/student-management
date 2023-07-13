@@ -1,0 +1,79 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+.hero-wrapper{
+    position: relative;
+    width: 100vw;
+    height: 50vh;
+    overflow: hidden;
+  }
+  .hero{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(
+        to right,
+        rgba(100, 5, 153, 0.8) 0%,
+        rgba(30, 100, 152, 0.8) 100%
+    );
+    
+  }
+  .hero-body{
+    text-align: center;
+  }
+  .hero-body .hero-title{
+    font-size: 13rem;
+    font-family: 'Satisfy', cursive;
+    color: #fff;
+  }
+  .hero-body p{
+    font-size: 1.2rem;
+    letter-spacing: 5px;
+    font-weight: 300;
+    margin-top: -40px;
+    color: #fff;
+  }
+  .hero-wrapper video{
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    width: 100%;
+    height: auto;
+  }
+  .hero-button{
+    margin-top: 40px;
+    margin: 0 auto;
+  }
+.hero-button button{
+    margin: 0 auto;
+    display: flex;
+    gap: 10px;
+    vertical-align: top;
+    text-align: center;
+    text-decoration: none;
+    padding: 12px 45px;
+    background-color: #fff;
+     color: rgba(100, 5, 153, 1);
+     box-shadow: 5px 5px 20px 7px rgba(0, 0, 0, 0.1);
+     border-radius: 25px;
+     transition: 0.5s all;
+     cursor: pointer;
+     font-size: 1.5rem;
+     font-weight: 300;
+}
+.hero-button button:hover{
+    background: rgba(100, 5, 153, 1);
+    box-shadow: 5px 5px 20px 7px rgba(0, 0, 0, 0.3);
+}
+
+.person {
+    font-size: 2rem;
+    border: 1px solid rgba(100, 5, 153, 1);
+    border-radius: 50%;
+}
+
+.hero-button button:hover .person{
+    border: 1px solid #fff;
+    color: #fff;
+}

@@ -1,0 +1,14 @@
+.actions {
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.visibility{
+    color: blue;
+}
+.edit{
+    color: chocolate;
+}
+.person_remove{
+    color: red;
+}
