@@ -1,4 +1,3 @@
-import { environment } from "../enviroments/enviroment";
 import { getData } from "../helpers/getData";
 import { submitForm } from "../modules/submitForm";
 
