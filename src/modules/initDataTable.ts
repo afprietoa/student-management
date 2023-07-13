@@ -4,6 +4,8 @@ import { Data, Estudiante } from "../scripts/classes/estudiante";
 import { clearTableElements } from "./clearTableElements";
 import { printBody } from "./printTBody";
 import { printTHead } from "./printTHead";
+import DataTable from 'datatables.net-dt';
+
 
 const dataTableOptions: any = {
     pageLength: 5,

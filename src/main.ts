@@ -11,7 +11,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
             <h1 class="hero-title">Student</h1>
             <p>Nurture the minds, for a brighter future</p>
             <div class="hero-button">
-              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+              <button type="button" class="btn btn-primary person" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
               <span class="material-symbols-outlined person">
               person
               </span>
@@ -34,7 +34,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h1 class="modal-title fs-5 fw-semibold" id="staticBackdropLabel">Student registration</h1>
+          <h1 class="modal-title fs-5 fw-semibold" id="staticBackdropLabel title-form">Student registration</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
@@ -91,14 +91,13 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
         <input type="text" class="form-control" id="github" data-type="github" minlength="10" maxlength="100" pattern="^https://github.com/[a-zA-Z0-9_.+-]*$" required>
         <span class="input-message-error">Este campo no es valido</span>
       </div>
-
-      </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
-        <button type="submit" class="btn btn-primary" id="btn-form">Save</button>
+      <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
+      <button type="submit" class="btn btn-primary" id="btn-form">Save</button>
       </div>
-    </div>
-    </form>
+      </div>
+      </form>
+      </div>
     </div>
   </div>
 

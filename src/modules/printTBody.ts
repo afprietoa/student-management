@@ -41,18 +41,23 @@ export const printBody: (tbody: HTMLElement|null, array: Array<Estudiante>) => v
 
         let spanVisibility= document.createElement('span') as HTMLElement;
         spanVisibility.setAttribute('class','material-symbols-outlined actions visibility')
+        spanVisibility.setAttribute('id',item.estudiante_id.toString())
         let txtVisibility= document.createTextNode('visibility') as Text;
         spanVisibility.appendChild(txtVisibility);
         tdActions?.appendChild(spanVisibility);
 
         let spanEdit= document.createElement('span') as HTMLElement;
         spanEdit.setAttribute('class','material-symbols-outlined actions edit')
+        spanEdit.setAttribute('id',item.estudiante_id.toString())
+        spanEdit.setAttribute('data-bs-toggle','modal')
+        spanEdit.setAttribute('data-bs-target','#staticBackdrop')
         let txtEdit= document.createTextNode('edit') as Text;
         spanEdit.appendChild(txtEdit);
         tdActions?.appendChild(spanEdit);
 
         let spanPersonRemove= document.createElement('span') as HTMLElement;
         spanPersonRemove.setAttribute('class','material-symbols-outlined actions person_remove')
+        spanPersonRemove.setAttribute('id',item.estudiante_id.toString())
         let txtPersonRemove= document.createTextNode('person_remove') as Text;
         spanPersonRemove.appendChild(txtPersonRemove);
         tdActions?.appendChild(spanPersonRemove);     
