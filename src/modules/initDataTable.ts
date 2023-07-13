@@ -19,7 +19,7 @@ export const initDataTable: (isInitialized:boolean, dataTable: any , columns:Arr
         dataTable.destroy();
     }
 
-    data = await getData(environment.apiUrl + 'estudiantes');
+    data = await getData('estudiantes');
     students = data.data;
 
     clearTableElements(thead);

@@ -23,15 +23,15 @@ submitButton.innerHTML = studentId
 document.addEventListener('DOMContentLoaded', async () =>{
 
     let student:any = {};
-    const URL = studentId ? `${environment.apiUrl + 'estudiantes/'}${studentId}` : environment.apiUrl + 'estudiantes/';
+    const URL = studentId ? `'estudiantes/'}${studentId}` : 'estudiantes/';
     try {
         if (studentId){
 
             student = await getData(URL);
 
-            title.innerText = editForm
-            ? `Actualiza los datos de ${student.estudiante_nombres}`
-            : "Agregar nuevo Estudiante";
+            title.innerText = studentId
+            ? `Update data of ${student.estudiante_nombres}`
+            : "Add new student";
 
 
             formChildren.forEach((inputChild: any) => {
