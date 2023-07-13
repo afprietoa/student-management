@@ -31,9 +31,3 @@ document.addEventListener('click', async (event: MouseEvent) => {
     }
     }
 })
-
-const modalCard2 = document.getElementById('staticBackdrop2');
-
-modalCard2?.addEventListener('unload',()=>{
-    sessionStorage.removeItem('studentByShow')
-})

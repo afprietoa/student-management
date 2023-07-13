@@ -56,8 +56,3 @@ document.addEventListener('click', async (event: MouseEvent) => {
 }
 });
 
-const modalCard = document.getElementById('staticBackdrop');
-
-modalCard?.addEventListener('unload',()=>{
-    sessionStorage.removeItem('studentByUpdate')
-})
