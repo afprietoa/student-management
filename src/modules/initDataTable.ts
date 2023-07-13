@@ -1,4 +1,3 @@
-import { environment } from "../enviroments/enviroment";
 import { getData } from "../helpers/getData";
 import { Data, Estudiante } from "../scripts/classes/estudiante";
 import { clearTableElements } from "./clearTableElements";
