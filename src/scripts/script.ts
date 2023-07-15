@@ -1,6 +1,10 @@
 import Swal from "sweetalert2";
 import { initDataTable } from "../modules/initDataTable";
 import { validate } from "../modules/validations";
+import { putData } from "../helpers/putData";
+import { Data, Estado, Estudiante } from "./classes/estudiante";
+import { printBody } from "../modules/printTBody";
+import { getData } from "../helpers/getData";
 
 const thead = document.getElementById('table-head') as HTMLFormElement;
 const tbody = document.getElementById('table-body') as HTMLFormElement;
@@ -54,17 +58,31 @@ document.addEventListener('click', async (event: MouseEvent) => {
    // functionality to disable a student
     if(target.classList.contains('person_remove')){
         Swal.fire({
-            title: "Do you sure to delete this student?",
+            title: "Do you sure to disable this student?",
             text: "You won't be able to revert this!",
             icon: "warning",
             showCancelButton: true,
             confirmButtonColor: "#3085D6",
             cancelButtonColor: "#D33",
-            confirmButtonText: "Yes, delete it!"
+            confirmButtonText: "Yes, disable it!"
         }).then( async (result) =>{
             if(result.isConfirmed){
-                Swal.fire("Deleted!", "You file has been deleted", "success");
-
+                Swal.fire("Disabled!", "You student has been disabled", "success");
+                const studentId = parseInt(target.id);
+                const URL = `estudiantes/${studentId}`;
+                const estudiante: Estado = {
+                    estado: 'Inactivo'
+                  }
+                let students: Array<Estudiante>;
+                let data: Data;
+                try {
+                    await putData(URL, estudiante);
+                    data = await getData('estudiantes');
+                    students = data.data;
+                    printBody(tbody, students);
+                } catch (error) {
+                    console.log('There is an error, could not delete!' + error);
+                }
             }
         })
     }
@@ -78,8 +96,5 @@ document.addEventListener('click', async (event: MouseEvent) => {
     if(target.classList.contains('visibility')){
         sessionStorage.setItem('studentByShow', JSON.stringify(target.id));
     }
-    // functionality to add a student
-    if(target.classList.contains('person')){
-  
-    }
+
   });

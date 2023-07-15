@@ -18,5 +18,5 @@ export interface Estudiante{
 }
 
 export interface Estado{
-    estudiante_estado: string,
+    estado: string,
 }
