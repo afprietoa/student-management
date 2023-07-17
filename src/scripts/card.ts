@@ -1,17 +1,17 @@
 import { getData } from "../helpers/getData";
 import { printCard } from "../modules/printCard";
 
-const cardHeader=document.querySelector('.card-header') as HTMLElement;
-const cardBody=document.querySelector('.card-body') as HTMLElement;
-
-const studentIdStr2: string = sessionStorage.getItem('studentByShow')
-? JSON.parse(sessionStorage.getItem('studentByShow')!)
-: "";
-
-
-const studentId2: number | null = studentIdStr2 ? parseInt(studentIdStr2) : null;
 
 document.addEventListener('click', async (event: MouseEvent) => {
+    const cardHeader=document.querySelector('.card-header') as HTMLElement;
+    const cardBody=document.querySelector('.card-body') as HTMLElement;
+    
+    const studentIdStr2: string = sessionStorage.getItem('studentByShow')
+    ? JSON.parse(sessionStorage.getItem('studentByShow')!)
+    : "";
+    
+    
+    const studentId2: number | null = studentIdStr2 ? parseInt(studentIdStr2) : null;
     const target = event.target as HTMLElement;
     if(target.classList.contains('visibility')){
     console.log('Entro a la tarjeta')
