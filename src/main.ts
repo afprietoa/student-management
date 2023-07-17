@@ -56,7 +56,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
 
       <div class="mb-1">
       <label for="numeroIdentificacion" class="form-label fw-medium">Numero Identificación:</label>
-      <input type="text" class="form-control" id="numeroIdentificacion" data-type="numeroIdentificacion" min="3" max="30" pattern="^(?=.*[0-9])$" required></input>
+      <input type="text" class="form-control" id="numeroIdentificacion" data-type="numeroIdentificacion" min="3" max="30" pattern="^[0-9]*$" required></input>
         <span class="input-message-error">Este campo no es valido</span>
       </div>
 
@@ -74,7 +74,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
 
       <div class="mb-1">
         <label for="celular" class="form-label fw-medium">Celular:</label>
-        <input type="text" class="form-control" id="celular" data-type="celular" min="10" max="13" pattern="^(?=.*[0-9])$" required>
+        <input type="text" class="form-control" id="celular" data-type="celular" min="10" max="13" pattern="^[0-9]*$" required>
         <span class="input-message-error">Este campo no es valido</span>
       </div>
 
@@ -96,7 +96,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
         <span class="input-message-error">Este campo no es valido</span>
       </div>
       <div class="modal-footer">
-      <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
+      <button type="button" class="btn btn-light btn-cancel" data-bs-dismiss="modal">Close</button>
       <button type="submit" class="btn btn-primary" id="btn-form">Sign In</button>
       </div>
       </div>
@@ -116,7 +116,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
 
       </div>
       <div class="modal-footer">
-        <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Back to first</button>
+        <button class="btn btn-primary btn-cancel" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Back to first</button>
       </div>
     </div>
   </div>

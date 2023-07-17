@@ -104,7 +104,7 @@ document.addEventListener('click', async (event: MouseEvent) => {
     
 
     // funcionality to cancel the action
-    if(target.classList.contains('btn-close')){
+    if(target.classList.contains('btn-close') || target.classList.contains('btn-cancel')){
         sessionStorage.removeItem('studentByUpdate')
         sessionStorage.removeItem('studentByShow')
     }
