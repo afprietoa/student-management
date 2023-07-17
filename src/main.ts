@@ -39,7 +39,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
       <div class="modal-content">
         <div class="modal-header">
           <h1 class="modal-title fs-5 fw-semibold title-form" id="staticBackdropLabel">Add new student</h1>
-          <button type="button" id="btn-close" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
 
@@ -110,7 +110,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
     <div class="modal-content">
       <div class="modal-header">
       <div class="modal-header card-header"></div>
-        <button type="button" class="btn-close" id="btn-close2" data-bs-dismiss="modal" aria-label="Close"></button>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body card-body">
 

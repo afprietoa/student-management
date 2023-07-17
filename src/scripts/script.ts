@@ -97,4 +97,16 @@ document.addEventListener('click', async (event: MouseEvent) => {
         sessionStorage.setItem('studentByShow', JSON.stringify(target.id));
     }
 
+    // funcionality to add to a student
+    if(target.classList.contains('visibility')){
+    
+    }
+    
+
+    // funcionality to cancel the action
+    if(target.classList.contains('btn-close')){
+        sessionStorage.removeItem('studentByUpdate')
+        sessionStorage.removeItem('studentByShow')
+    }
+
   });
